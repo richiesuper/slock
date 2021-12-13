@@ -12,10 +12,33 @@ static const char *colorname[NUMCOLS] = {
 static const int failonclear = 1;
 
 /* default message */
-static const char * message = "Suckless: Software that sucks less.";
+static const char * message = " ______________________________\n\
+/ lasciante ogne speranza, voi \\\n\
+\\ ch'intrate.                  /\n\
+ ------------------------------\n\
+   \\         ,        ,\n\
+    \\       /(        )`\n\
+     \\      \\ \\___   / |\n\
+            /- _  `-/  '\n\
+           (/\\/ \\ \\   /\\\n\
+           / /   | `    \\\n\
+           O O   ) /    |\n\
+           `-^--'`<     '\n\
+          (_.)  _  )   /\n\
+           `.___/`    /\n\
+             `-----' /\n\
+<----.     __ / __   \\\n\
+<----|====O)))==) \\) /====\n\
+<----'    `--' `.__,' \\\n\
+             |        |\n\
+              \\       /\n\
+        ______( (_  / \\______\n\
+      ,'  ,-----'   |        \\\n\
+      `--{__________)        \\/";
+
 
 /* text color */
 static const char * text_color = "#ffffff";
 
 /* text size (must be a valid size) */
-static const char * font_name = "6x10";
+static const char * font_name = "-b&h-luxi mono-bold-r-normal-*-17-120-100-100-m-0-iso8859-15";
