@@ -1,0 +1,5 @@
+# Ignore all .o, .rej, .orig, and executables
+*.o
+*.rej
+*.orig
+slock
