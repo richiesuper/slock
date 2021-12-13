@@ -7,15 +7,28 @@ VERSION = 1.4
 PREFIX = /usr/local
 MANPREFIX = ${PREFIX}/share/man
 
-X11INC = /usr/X11R6/include
-X11LIB = /usr/X11R6/lib
+# Original X11INC and X11LIB dirs
+#X11INC = /usr/X11R6/include
+#X11LIB = /usr/X11R6/lib
 
-# includes and libs
-INCS = -I. -I/usr/include -I${X11INC}
-LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr
+# Modified X11INC and X11LIB dirs to work on FreeBSD
+X11INC = /usr/local/include
+X11LIB = /usr/local/lib
+
+# Original includes and libs
+#INCS = -I. -I/usr/include -I${X11INC}
+#LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr
+
+# Modified includes and libs to work on FreeBSD
+INCS = -I. -I/usr/local/include -I${X11INC}
+LIBS = -L/usr/local/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr
 
 # flags
-CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE -DHAVE_SHADOW_H
+# Original CPPFLAGS
+#CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE -DHAVE_SHADOW_H
+
+# Modified CPPFLAGS to run on FreeBSD
+CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE
 CFLAGS = -std=c99 -pedantic -Wall -Os ${INCS} ${CPPFLAGS}
 LDFLAGS = -s ${LIBS}
 COMPATSRC = explicit_bzero.c
