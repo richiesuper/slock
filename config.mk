@@ -21,7 +21,7 @@ X11LIB = /usr/local/lib
 
 # Modified includes and libs to work on FreeBSD
 INCS = -I. -I/usr/local/include -I${X11INC}
-LIBS = -L/usr/local/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr
+LIBS = -L/usr/local/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr -lXinerama
 
 # flags
 # Original CPPFLAGS
